@@ -1,0 +1,910 @@
+/******************************************************************************
+START Glitch hello-app default styles
+
+The styles in this section do some minimal CSS resets, set default fonts and 
+colors, and handle the layout for our footer and "Remix on Glitch" button. If
+you're new to CSS they may seem a little complicated, but you can scroll down
+to this section's matching END comment to see page-specific styles.
+******************************************************************************/
+
+/* 
+  The style rules specify elements by type and by attributes such as class and ID
+  Each section indicates an element or elements, then lists the style properties to apply
+  See if you can cross-reference the rules in this file with the elements in index.html
+*/
+
+/* Our default values set as CSS variables */
+:root {
+  --color-bg: #000000;
+  --color-text-main: #FFFFFF;
+  /*   --color-primary: #FFFF00; */
+  --wrapper-height: 87vh;
+  /*   --image-max-width: 300px; */
+  /*   --image-margin: 3rem; */
+}
+
+/* Basic page style resets */
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+
+/* Import fonts */
+@font-face {
+  font-family: HK Grotesk;
+  src: url("https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
+    format("opentype");
+}
+@font-face {
+  font-family: HK Grotesk;
+  font-weight: bold;
+  src: url("https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "terminal_grotesque";
+  src: url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2Fterminal-grotesque-webfont.eot?v=1625672211925");
+  src: url("terminal-grotesque-webfont.eot?#iefix") format("embedded-opentype"),
+    url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2Fterminal-grotesque-webfont.woff2?v=1625672212187")
+      format("woff2"),
+    url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2Fterminal-grotesque-webfont.woff?v=1625672212207")
+      format("woff"),
+    url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2Fterminal-grotesque-webfont.ttf?v=1625672212466")
+      format("truetype"),
+    url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2Fterminal-grotesque-webfont.svg?v=1625672212433")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Steps_Mono_Thin";
+  src: url("https://cdn.glitch.global/881568ba-9108-451e-8580-e3af938cc2b7/Steps-Mono-Thin.otf?v=1710767661891");
+  src: url("https://cdn.glitch.global/881568ba-9108-451e-8580-e3af938cc2b7/Steps-Mono-Thin.otf?v=1710767661891")
+      format("embedded-opentype"),
+    url("https://cdn.glitch.global/881568ba-9108-451e-8580-e3af938cc2b7/Steps-Mono-Thin.otf?v=1710767661891")
+      format("woff"),
+    url("https://cdn.glitch.global/881568ba-9108-451e-8580-e3af938cc2b7/Steps-Mono-Thin.otf?v=1710767661891")
+      format("woff2"),
+    url("https://cdn.glitch.global/881568ba-9108-451e-8580-e3af938cc2b7/Steps-Mono-Thin.otf?v=1710767661891")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "Avara_Bold";
+  src: url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2FAvara-Bold.eot?v=1626261788966");
+  src: url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2FAvara-Bold.eot?v=1626261788966")
+      format("embedded-opentype"),
+    url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2FAvara-Bold.woff?v=1626261789964")
+      format("woff"),
+    url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2FAvara-Bold.woff2?v=1626261789673")
+      format("woff2"),
+    url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2FAvara-Bold.ttf?v=1626261789232")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avara_Bold Italic";
+  src: url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2FAvara-BoldItalic.eot?v=1626261795983");
+  src: url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2FAvara-BoldItalic.eot?v=1626261795983")
+      format("embedded-opentype"),
+    url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2FAvara-BoldItalic.woff?v=1626261796489")
+      format("woff"),
+    url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2FAvara-BoldItalic.woff2?v=1626261796772")
+      format("woff2"),
+    url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2FAvara-BoldItalic.ttf?v=1626261796197")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Avara_Black";
+  src: url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2FAvara-Black.eot?v=1626261779680");
+  src: url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2FAvara-Black.eot?v=1626261779680")
+      format("embedded-opentype"),
+    url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2FAvara-Black.woff?v=1626261779937")
+      format("woff"),
+    url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2FAvara-Black.woff2?v=1626261779880")
+      format("woff2"),
+    url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2FAvara-Black.ttf?v=1626261780034")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/******************************************************************************
+END Glitch hello-app default styles
+******************************************************************************/
+
+body {
+  font-family: "Avara_Bold Italic";
+  background-color: var(--color-bg);
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>💧</text></svg>")
+      16 0,
+    auto;
+}
+
+/* Page structure */
+.wrapper {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.square {
+  width: 250px;
+  height: 230px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Very light scaling for our illustration */
+.title {
+  color: #FFFFFF;
+  text-align: center;
+  font-family: "Avara_Bold", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 150%;
+  margin: auto;
+}
+
+#entrance {
+  font-family: "Avara_Bold Italic", serif italic;
+}
+
+#illustration {
+  min-width: 350px;
+  height: auto;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  font-size: 20px;
+  text-align: center;
+  line-height: 35px;
+  font-family: "Avara_Bold Italic", serif italic;
+}
+
+p {
+  font-size: 17px;
+  text-align: center;
+  line-height: 20px;
+  font-family: "Avara_Bold Italic", serif italic;
+}
+
+/* Rooms styling*/
+.rooms {
+  background-color: #ffb0b3;
+  color: #000000;
+}
+
+#temple-bg {
+  /* The image used */
+  background-image: url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2Ftemple-bg-2.jpg?v=1626854108356");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-family: monospace;
+  border: dotted;
+  padding: 10px;
+}
+
+a:hover {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🦋</text></svg>")
+      16 0,
+    auto;
+}
+
+a:visited {
+  color: black;
+  text-transform: uppercase;
+  font-family: monospace;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  margin: 1%;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 0.5%;
+  width: 100%;
+}
+
+/* css for stories */
+
+.circle {
+  width: 25em;
+  height: 25em;
+  position: absolute;
+  z-index: 0;
+  top: 40%;
+  left: 40%;
+}
+
+.circle .border {
+  position: absolute;
+  z-index: -10;
+  top: 0;
+  bottom: -2px;
+  left: 0;
+  right: -2px;
+  background: transparent;
+  /*   border-radius: 50%;
+  border: 2px dotted black; */
+}
+
+.star-container {
+  width: auto;
+  height: 450px;
+  position: relative;
+  margin-bottom: 5em;
+}
+
+.cuerpos-trazados {
+  width: 350px;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  border-radius: 25%;
+}
+
+#anahuacalli-portal {
+  text-decoration: underline;
+  color: black;
+  font-size: 300%;
+  text-transform: lowercase;
+  font-family: monospace;
+  border: solid;
+  border-width: 0px;
+  padding: 0; 
+}
+
+#tracing-bodies-link {
+  font-family: "Avara_Bold Italic", serif italic !important;
+  text-decoration: underline;
+  color: white;
+  text-transform: lowercase;
+  border-width: 0px;
+  padding: 0; 
+}
+
+#tracing-spaces-link {
+    color: pink;
+    border-width: 0px;
+  padding: 0; 
+    text-transform: lowercase;
+    text-decoration: underline;
+}
+
+.centered-text {
+  width: 500px;
+  padding: 30px;
+  word-wrap: break-word;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  line-height: 1.5em;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.centered-text-2 {
+  width: 500px;
+  padding: 30px;
+  word-wrap: break-word;
+  margin: 0;
+  position: absolute;
+  display: flex;
+  align-items:center;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  line-height: 1.5em;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.text-3 {
+  width: 400px;
+  padding: 30px;
+  word-wrap: break-word;
+  margin: 0;
+  position: absolute;
+  display: flex;
+  align-items:center;
+  flex-direction: column;
+  top: 50%;
+  left: 10%;
+  -ms-transform: translate(-180%, -50%);
+  transform: translate(-180%, -50%);
+}
+
+#text-silence {
+  text-decoration: line-through;
+}
+
+.text-information {
+  border-style: dotted;
+  border-color: white;
+  border-width: 2px;
+  border-radius: 50%;
+  padding: 20px;
+  color: white;
+}
+
+#text-affirmation {
+  border-style: double;
+  border-color: black;
+  border-width: 3px;
+  border-radius: 10px;
+  background: white;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#text-sharing {
+  border-style: dotted;
+  border-color: black;
+  border-width: 2px;
+  border-radius: 50%;
+  padding: 20px;
+}
+
+#text-music {
+  border-style: double;
+  border-color: black;
+  border-width: 5px;
+  border-radius: 50px;
+  padding: 20px;
+  background-color: #ffb0b3;
+}
+
+#text-dancing {
+  font-family: "Avara_Bold Italic", serif italic;
+  text-align: center;
+  border-style: double;
+  border-color: black;
+  border-width: 4px;
+  border-radius: 40px;
+  padding: 20px;
+  background-color: #ffb0b3;
+}
+
+#text-anahuacalli {
+  font-family: "Steps_Mono_Thin", monospace;
+  line-height: 140%;
+  color: white;
+  text-align: left;
+  padding: 20px;
+}
+
+.nice-cursor:hover {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🦋</text></svg>")
+      16 0,
+    auto;
+}
+
+
+#floorplan {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  place-items: center;
+  max-width: 38%;
+}
+
+.button-ts {
+  border: double;
+  padding: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  line-height: 20px;
+  font-family: "Avara_Bold Italic", serif italic;
+  margin-top: 15px;
+  margin-left: 15px;
+position: absolute;
+      }
+
+.button1-ts {
+  background-color: #ffb0b3;
+  color: black;
+}
+
+.button1-ts:hover {
+  background-color: white;
+  color: black;
+}
+
+.buttons {
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.lily {
+  width: 1200px;
+}
+
+.rose {
+  left: 30%;
+}
+
+.blackberry {
+  width: 150%;
+  max-width: 1000px;
+  height: auto;
+}
+
+.container {
+  display: none;
+  z-index: 1000;
+  border: 4px dotted white;
+  padding: 20px;
+  background-color: black;
+  width: 500px;
+  text-align: justify;
+  color: white;
+  font-size: 1em;
+  font-family: monospace;
+  line-height: 1.5em;
+}
+
+#first-container {
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+
+#second-container {
+  top: 15px;
+  left: 500px;
+  position: absolute;
+}
+
+#third-container {
+  top: 20px;
+  left: 1000px;
+  position: absolute;
+}
+
+/* G A R D E N */
+
+#garden {
+  /* The image used */
+  background-image: url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2Fflower-bg.jpg?v=1626853097617");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.box {
+  width: 1000px;
+  padding: 20px;
+  border-style: dashed;
+  border-color: black;
+  border-width: 3px;
+  word-wrap: break-word;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 75px;
+  background-color: #9ab966;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 600px; /* Location of the box */
+  left: 800px;
+  top: 0;
+  width: 40%;
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: black;
+  margin: auto;
+  padding: 20px;
+  border: 1px dashed white;
+  width: 80%;
+  text-align: justify;
+  text-align-last: center;
+  color: white;
+  font-size: 1em;
+  font-family: monospace;
+  line-height: 1.5em;
+}
+
+.button {
+  border: none;
+  text-decoration: none;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  font-size: 17px;
+  text-align: center;
+  line-height: 20px;
+  font-family: "Avara_Bold Italic", serif italic;
+}
+
+.button1 {
+  background-color: #9ab966;
+  color: black;
+}
+
+.button1:hover {
+  background-color: #FF5733;
+  color: white;
+}
+
+.close: hover;
+
+/* S i l e n c e */
+
+/* A F F I R M A T I O N  */
+.affirmation {
+  /* The image used */
+  background-image: url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2FBG-affirmation.jpg?v=1626855760835");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.image-buttons-aff {
+  position: fixed;
+  width: 40%;
+  height: 30%;
+  top: 30%;
+  left: 70%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* I n f o r m a t i o n */
+.information {
+  /* The image used */
+  background-image: url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2Fbg-information.jpg?v=1626856800303");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.information-extra {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 40%;
+  padding: 200px;
+  font-family: monospace;
+  font-size: 16px;
+  text-align: center;
+}
+
+.info-boxes {
+  background-color: white;
+  padding: 10px;
+  line-height: 1.5em;
+}
+
+/* M u S i C */
+.music {
+  /* The image used */
+  background-image: url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2Fmusic-BG.jpg?v=1626856379185");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* M O B I L E */
+/* M O B I L E */
+/* M O B I L E */
+/* M O B I L E */
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 1149px) {
+  p {
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px;
+    font-family: "Avara_Bold Italic", serif italic;
+  }
+
+  #illustration {
+/*     max-width: 300px; */
+/*     height: auto; */
+/*     padding: 10px; */
+/*     position: fixed; */
+/*     top: 50%;
+    left: 50%; */
+/*     -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+  }
+
+  .wrapper {
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .circle {
+    width: 18em;
+    height: 18em;
+    left: 4.5em;
+    top: -6.5em;
+  }
+
+  #sharing-text {
+    text-align: center !important;
+    z-index: 1;
+    font-size: 1.5em;
+  }
+
+  .centered-text {
+    width: 350px;
+    padding: 30px;
+    word-wrap: break-word;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  
+  .text-3 {
+  width: 280px;
+  padding: 0px;
+  word-wrap: break-word;
+  background-color: black;
+    border: dotted;
+    border-color: white;
+  margin: 0;
+  overflow: scroll;
+  position: absolute;
+  display: flex;
+  align-items:center;
+  flex-direction: column;
+  -ms-transform: translate(-50%, 40%);
+  transform: translate(-50%, 40%);
+}
+
+  .buttons {
+    /*     border-style: dotted;
+  border-color: blue;   */
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .container {
+    display: none;
+    z-index: 1000;
+    border: 4px dotted white;
+    padding: 20px;
+    background-color: black;
+    width: 300px;
+    height: 600px;
+    text-align: justify;
+    color: white;
+    font-size: 1em;
+    font-family: monospace;
+    line-height: 1.5em;
+    overflow-y: scroll;
+  }
+
+  .lily {
+    width: 800%;
+    max-width: 1000px;
+    height: auto;
+  }
+
+  .blackberry {
+    width: 300%;
+    max-width: 1000px;
+    height: auto;
+  }
+
+  .rose {
+    top: 70%;
+    width: 150%;
+    max-width: 1000px;
+    height: auto;
+  }
+
+  #first-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  /*  affirmation for mobile */
+
+  #text-affirmation {
+    border-style: double;
+    border-color: black;
+    border-width: 3px;
+    border-radius: 10px;
+    background: white;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 50%;
+  }
+
+  .image-buttons-aff {
+    position: fixed;
+    width: 20%;
+    height: 20%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  /*   information for mobile */
+
+  .information-extra {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    padding: 70px;
+    font-family: monospace;
+    font-size: 8px;
+    text-align: center;
+  }
+
+  .info-boxes {
+    border-style: dotted;
+    border-color: black;
+    background-color: white;
+    padding: 10px;
+    line-height: 1.5em;
+    overflow-y: scroll;
+    width: 140px;
+  }
+
+  /*  garden for mobile  */
+
+  .box {
+    width: 90%;
+    padding: 10px;
+    border-style: dashed;
+    border-color: black;
+    border-width: 2px;
+    word-wrap: break-word;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 75px;
+    background-color: #9ab966;
+  }
+
+  #smaller-screens {
+    font-size: 10px;
+  }
+
+  #myBtn {
+    font-size: 10px;
+  }
+
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 20%; /* Location of the box */
+    left: 20%;
+    top: 0;
+    width: 60%;
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+  }
+}
+
+@media (max-width: 600px) {
+  .circle {
+    width: 13em;
+    height: 13em;
+    left: -6.5em;
+    top: -3em;
+  }
+
+  #sharing-text {
+    text-align: center !important;
+    z-index: 1;
+    font-size: 0.7em;
+  }
+
+  #myVideo {
+    height: 100%;
+  }
+
+  #floorplan {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    place-items: center;
+    max-width: 95%;
+  }
+
+  h2 {
+    padding: 10px;
+    font-size: 17px;
+    text-align: center;
+    line-height: 30px;
+    font-family: "Avara_Bold Italic", serif italic;
+  }
+}
+
+@media (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
