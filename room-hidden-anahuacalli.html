@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <title>anahuacalli</title>
+
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- Import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+    <script language="JavaScript" src="/sharing.js" defer></script>
+    <script language="JavaScript" src="/video.js" defer></script>
+
+    <style>
+      #myVideo {
+        position: fixed;
+        bottom: -80%;
+        left: 0;
+        min-width: 100%;
+        min-height: 50%;
+        z-index: -1;
+      }
+
+      /* Add some content at the bottom of the video/page */
+      .content {
+        z-index: 2;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+      }
+
+      @media (max-width: 1149px) {
+        #myVideo {
+          position: fixed;
+          top: 0;
+          left: 0;
+          min-width: 100%;
+          min-height: 50%;
+          z-index: -1;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <video playsinline muted autoplay loop id="myVideo">
+
+      <source
+        src="https://cdn.glitch.global/881568ba-9108-451e-8580-e3af938cc2b7/TB-together.mov?v=1710764826026"
+        type="video/mp4"
+      />
+    </video>
+
+    <!--everything but video below here-->
+
+    <div class="buttons nice-cursor">
+      <div class="text-3" id="open-sesame">
+        <p id="text-anahuacalli">
+          you have reached a small side room on the first floor of the
+          anahuacalli. the day is 5 august 2023. 
+          <br />
+          read more about this installation ⇢
+          <a
+            id="tracing-bodies-link"
+            target="_blank"
+            href="https://docs.google.com/document/d/1d4eEnno14wbCX2sz8cIhoS4beqTKl7-60zYGmGA-uHA/edit?usp=sharing"
+            >here</a
+          >
+          <br /><br />
+          ❤︎ video by pauline escobar ❤︎
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

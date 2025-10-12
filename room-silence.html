@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+      This is the page head - it contains info the browser uses to display the page
+      You won't see what's in the head in the page
+      Scroll down to the body element for the page content
+    -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <!-- 
+      This is an HTML comment
+      You can write text in a comment and the content won't be visible in the page
+    -->
+
+    <title>a room for silence</title>
+
+    <!-- Meta tags for SEO and social sharing -->
+    <link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
+    <meta
+      name="description"
+      content="A simple website, built with Glitch. Remix it to get your own."
+    />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="Temple" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://glitch-hello-website.glitch.me/" />
+    <meta
+      property="og:description"
+      content="A simple website, built with Glitch. Remix it to get your own."
+    />
+    <meta
+      property="og:image"
+      content="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2Fhello-website-social.png?v=1616712748147"
+    />
+    <meta name="twitter:card" content="summary" />
+
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <style>
+            body,
+      html {
+        height: 100%;
+        margin: 0;
+      }
+
+      .bg {
+        /*  background-color: #9ab966; */
+        /* The image used */
+        background-image: url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2Fsilence-bg-2.jpg?v=1626958404739");
+        position: relative;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+      }
+
+      .caption {
+        position: absolute;
+        left: 0;
+        top: 0.5%;
+        width: 100%;
+      }
+      
+      .button {
+        font-family: "Avara_Bold";
+        font-size: 14px;
+        border: none;
+        color: black;
+        padding-left: 32%;
+        padding-right: 32%;
+        text-align: center;
+        text-decoration: none;
+        display: relative;
+        width: auto;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        position: absolute;
+        bottom: 10%;
+      }
+
+      .button1 {
+        font-family: monospace;
+        letter-spacing: 1px;
+        font-size: 14px;
+        background-color: transparent;
+        color: transparent;
+      }
+
+      .button1:hover {
+        font-family: monospace;
+        letter-spacing: 1px;
+        font-size: 14px;
+        background-color: transparent;
+        color: black;
+      }
+      
+/*     for mobile */
+      @media (max-width: 1149px) {
+            
+        .button {
+        font-family: "Avara_Bold";
+        font-size: 14px;
+        border: none;
+        color: black;
+        padding-left: 10%;
+        padding-right: 10%;
+        text-align: center;
+        text-decoration: none;
+        display: relative;
+        width: auto;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        position: absolute;
+        bottom: 10%;
+      }
+
+      .button1 {
+        font-family: monospace;
+        letter-spacing: 1px;
+        font-size: 8px;
+        background-color: transparent;
+        color: transparent;
+      }
+
+      .button1:hover {
+        font-family: monospace;
+        letter-spacing: 1px;
+        font-size: 8px;
+        background-color: transparent;
+        color: black;
+      }
+        
+  .centered-text {
+  width: 500px;
+  padding: 30px;
+  word-wrap: break-word;
+  margin: 0;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  line-height: 1.5em;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+      }
+      
+    </style>
+
+    <!-- Import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+
+  <body class="silence">
+    <!--
+      This is the body of the page
+      Look at the elements and see how they appear in the rendered page on the right
+      Each element is defined using tags, with < and > indicating where each one opens and closes
+      There are elements for sections of the page, images, text, and more
+      The elements include attributes referenced in the CSS for the page style
+    -->
+<div class="bg">
+
+  <!--  menu  -->
+    <div class="caption">
+      <div class="menu">
+        <a class="nice-cursor" href="rooms.html">
+          go back to all the rooms
+        </a>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLScF_NAJAGK87S_0UWoLIA9NXU-5fsS62IP8A24jGI7sVoKi3g/viewform?usp=sf_link"
+          target="_blank"
+          rel="noopener noreferrer"
+           class="nice-cursor" 
+        >
+          share
+        </a>
+      </div>
+    </div>
+
+<p class="centered-text" id="text-silence">
+      we have spoken.
+    </p>
+
+    <button class="button button1">
+      Thank you to the University of the Underground for facilitating the
+      creation of this project, this is just the beginning. <br /><br />
+      Thank you to Amir, Celeste, Chloe, David, Francisco, Irem, Jamal, Jessica,
+      Karen, Kayla, Rachel, Ruth, Sony, Tereza for your companionship and
+      support whilst on this program. <br /><br />
+      Thank you Nahum, Nelly and all the UU teaching staff. <br /><br />
+      Thank you to Alessia, Anita, MSI Reproductive Choices, Yvonne Chireau,
+      Chiron Armand, Hannah Thompson, Angelica Wijethunga, the Heart Healing
+      group admins, Zachi, Juan Carlos Camarena, Lesley and to the many more who
+      contributed to my research and findings. <br /><br />
+      Fonts Credits: Avara by Raphaël Bastide, with the contribution of Wei Huang, Lucas Le Bihan, Walid Bouchouchi, Jérémy Landes.
+      Steps Mono by Jean-Baptiste Morizot, Raphaël Bastide. Distributed by velvetyne.fr.
+      <br /><br />
+      Thank you to my beautiful family, to all my dear
+      friends for their love and care.
+    </button>
+    </div>
+  </body>
+</html>
