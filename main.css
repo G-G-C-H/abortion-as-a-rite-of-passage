@@ -34,42 +34,40 @@ to this section's matching END comment to see page-specific styles.
 /* Import fonts */
 @font-face {
   font-family: HK Grotesk;
-  src: url("https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
+  src: url('fonts/HKGrotesk-Regular.otf')
     format("opentype");
 }
 @font-face {
   font-family: HK Grotesk;
   font-weight: bold;
-  src: url("https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
+  src: url('fonts/HKGrotesk-Bold.otf')
     format("opentype");
 }
 
 @font-face {
   font-family: "terminal_grotesque";
-  src: url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2Fterminal-grotesque-webfont.eot?v=1625672211925");
-  src: url("terminal-grotesque-webfont.eot?#iefix") format("embedded-opentype"),
-    url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2Fterminal-grotesque-webfont.woff2?v=1625672212187")
+  src: url('fonts/terminal-grotesque-webfont.eot');
+  src: url('fonts/terminal-grotesque-webfont.eot') format("embedded-opentype"),
+    url('fonts/terminal-grotesque-webfont.woff2')
       format("woff2"),
-    url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2Fterminal-grotesque-webfont.woff?v=1625672212207")
+    url('fonts/terminal-grotesque-webfont.woff')
       format("woff"),
-    url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2Fterminal-grotesque-webfont.ttf?v=1625672212466")
-      format("truetype"),
-    url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2Fterminal-grotesque-webfont.svg?v=1625672212433")
-      format("svg");
+    url('fonts/terminal-grotesque-webfont.ttf')
+      format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Steps_Mono_Thin";
-  src: url("https://cdn.glitch.global/881568ba-9108-451e-8580-e3af938cc2b7/Steps-Mono-Thin.otf?v=1710767661891");
-  src: url("https://cdn.glitch.global/881568ba-9108-451e-8580-e3af938cc2b7/Steps-Mono-Thin.otf?v=1710767661891")
+  src: url('fonts/Steps-Mono-Thin.otf');
+  src: url('fonts/Steps-Mono-Thin.otf')
       format("embedded-opentype"),
-    url("https://cdn.glitch.global/881568ba-9108-451e-8580-e3af938cc2b7/Steps-Mono-Thin.otf?v=1710767661891")
+    url('fonts/Steps-Mono-Thin.otf')
       format("woff"),
-    url("https://cdn.glitch.global/881568ba-9108-451e-8580-e3af938cc2b7/Steps-Mono-Thin.otf?v=1710767661891")
+    url('fonts/Steps-Mono-Thin.otf')
       format("woff2"),
-    url("https://cdn.glitch.global/881568ba-9108-451e-8580-e3af938cc2b7/Steps-Mono-Thin.otf?v=1710767661891")
+    url('fonts/Steps-Mono-Thin.otf')
       format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -78,14 +76,14 @@ to this section's matching END comment to see page-specific styles.
 
 @font-face {
   font-family: "Avara_Bold";
-  src: url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2FAvara-Bold.eot?v=1626261788966");
-  src: url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2FAvara-Bold.eot?v=1626261788966")
+  src: url('fonts/Avara-Bold.otf');
+  src: url('fonts/Avara-Bold.eot')
       format("embedded-opentype"),
-    url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2FAvara-Bold.woff?v=1626261789964")
+    url('fonts/Avara-Bold.woff')
       format("woff"),
-    url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2FAvara-Bold.woff2?v=1626261789673")
+    url('fonts/Avara-Bold.woff2')
       format("woff2"),
-    url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2FAvara-Bold.ttf?v=1626261789232")
+    url('fonts/Avara-Bold.ttf')
       format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -93,14 +91,14 @@ to this section's matching END comment to see page-specific styles.
 
 @font-face {
   font-family: "Avara_Bold Italic";
-  src: url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2FAvara-BoldItalic.eot?v=1626261795983");
-  src: url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2FAvara-BoldItalic.eot?v=1626261795983")
+  src: url('fonts/Avara-Bold.otf');
+  src: url('fonts/Avara-Bold.eot')
       format("embedded-opentype"),
-    url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2FAvara-BoldItalic.woff?v=1626261796489")
+    url('fonts/Avara-Bold.woff')
       format("woff"),
-    url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2FAvara-BoldItalic.woff2?v=1626261796772")
+    url('fonts/Avara-Bold.woff2')
       format("woff2"),
-    url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2FAvara-BoldItalic.ttf?v=1626261796197")
+    url('fonts/Avara-Bold.ttf')
       format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -108,14 +106,14 @@ to this section's matching END comment to see page-specific styles.
 
 @font-face {
   font-family: "Avara_Black";
-  src: url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2FAvara-Black.eot?v=1626261779680");
-  src: url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2FAvara-Black.eot?v=1626261779680")
+  src: url('fonts/Avara-Black.otf');
+  src: url('fonts/Avara-Black.eot')
       format("embedded-opentype"),
-    url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2FAvara-Black.woff?v=1626261779937")
+    url('fonts/Avara-Black.woff')
       format("woff"),
-    url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2FAvara-Black.woff2?v=1626261779880")
+    url('fonts/Avara-Black.woff2')
       format("woff2"),
-    url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2FAvara-Black.ttf?v=1626261780034")
+    url('fonts/Avara-Black.ttf')
       format("truetype");
   font-weight: normal;
   font-style: normal;
