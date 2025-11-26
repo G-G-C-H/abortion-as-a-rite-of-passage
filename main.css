@@ -91,14 +91,14 @@ to this section's matching END comment to see page-specific styles.
 
 @font-face {
   font-family: "Avara_Bold Italic";
-  src: url('fonts/Avara-Bold.otf');
-  src: url('fonts/Avara-Bold.eot')
+  src: url('fonts/Avara-BoldItalic.otf');
+  src: url('fonts/Avara-BoldItalic.eot')
       format("embedded-opentype"),
-    url('fonts/Avara-Bold.woff')
+    url('fonts/Avara-BoldItalic.woff')
       format("woff"),
-    url('fonts/Avara-Bold.woff2')
+    url('fonts/Avara-BoldItalic.woff2')
       format("woff2"),
-    url('fonts/Avara-Bold.ttf')
+    url('fonts/Avara-BoldItalic.ttf')
       format("truetype");
   font-weight: normal;
   font-style: normal;
