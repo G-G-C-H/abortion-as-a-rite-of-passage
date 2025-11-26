@@ -192,7 +192,7 @@ p {
 
 #temple-bg {
   /* The image used */
-  background-image: url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2Ftemple-bg-2.jpg?v=1626854108356");
+  background-image: url('assets/bg-temple2.jpg');
 
   /* Full height */
   height: 100%;
@@ -508,7 +508,7 @@ position: absolute;
 
 #garden {
   /* The image used */
-  background-image: url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2Fflower-bg.jpg?v=1626853097617");
+  background-image: url('assets/bg-flower.jpg');
 
   /* Full height */
   height: 100%;
@@ -588,7 +588,7 @@ position: absolute;
 /* A F F I R M A T I O N  */
 .affirmation {
   /* The image used */
-  background-image: url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2FBG-affirmation.jpg?v=1626855760835");
+  background-image: url('assets/bg-affirmation.jpg');
 
   /* Full height */
   height: 100%;
@@ -612,7 +612,7 @@ position: absolute;
 /* I n f o r m a t i o n */
 .information {
   /* The image used */
-  background-image: url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2Fbg-information.jpg?v=1626856800303");
+  background-image: url('assets/bg-information.jpg');
 
   /* Full height */
   height: 100%;
@@ -644,7 +644,7 @@ position: absolute;
 /* M u S i C */
 .music {
   /* The image used */
-  background-image: url("https://cdn.glitch.com/881568ba-9108-451e-8580-e3af938cc2b7%2Fmusic-BG.jpg?v=1626856379185");
+  background-image: url('assets/bg-music.jpg');
 
   /* Full height */
   height: 100%;
